@@ -1,27 +1,31 @@
 <div class="container"> 
     <div class="card" >
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Unique name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let project of projects">
-                    <td >{{ project.name }}</td>
-                    <td >{{ project.uniqueName }}</td>
-                    <td >{{ project.description }}</td>
-                    <td>
-                        <a type="button" class="btn btn-primary" [routerLink]="'/projects/edit/' + project.id">
-                           Edit
-                        </a>
-                        <a type="button" class="btn btn-danger" href="#">Delete</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card-body">
+            <h5 class="card-title">Projects</h5>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Unique name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let project of projects">
+                        <td >{{ project.name }}</td>
+                        <td >{{ project.uniqueName }}</td>
+                        <td >{{ project.description }}</td>
+                        <td>
+                            <a type="button" class="btn btn-primary" [routerLink]="'/projects/edit/' + project.id">
+                            Edit
+                            </a>
+                            <a type="button" class="btn btn-danger" href="#">Delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
